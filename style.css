@@ -1,0 +1,184 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box
+}
+
+body {
+    color: #1E222E;
+}
+
+.container {
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    border: 0;
+}
+
+.header {
+    padding: 16px 0;
+}
+
+.header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.buttons {
+    display: flex;
+    padding: 6px;
+    border: 1px solid #DBDFEC;
+    border-radius: 12px;
+    gap: 10px;
+}
+
+.nav-btn {
+    padding:  24px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #1E222E;
+}
+
+.nav-btn.active {
+    color: #fff;
+    background-color: #1E222E;
+}
+
+.lang {
+    border: 1px solid #DBDFEC;
+    border-radius: 12px;
+    padding: 18px 23px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #1E222E;
+    background-color: transparent;
+}
+
+.banner {
+    background-color: #F4F6FA;
+}
+
+.banner .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.banner-info {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 400px;
+}
+
+.banner-title {
+    font-size: 40px;
+    
+}
+
+.blue-text {
+    color: #476BF0;
+}
+
+.banner-description {
+    font-size: 18px;
+    width: 383px;
+    margin-bottom: 48px;
+}
+
+.banner-btn {
+    background-color: #476BF0;
+    color: #fff;
+    font-family: inherit;
+    width: 282px;
+    padding: 18px 32px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+.cards {
+    padding: 100px 0;
+}
+
+.card-list {
+    display: flex;
+    gap: 40px;
+    flex-direction: column;
+    margin-bottom: 100px;
+}
+
+.card {
+     border-radius: 16px;
+     height: 520px;
+     box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    gap: 92px;
+}
+
+.card-blue {
+ background-color: #A8DCFF;
+}
+
+.card-purple {
+    background-color: #8CA3FF;
+}
+
+.card-info {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.card-title {
+  font-size: 32px;
+}
+
+.card-description {
+  font-size: 18px;
+  
+}
+
+.card-blue .card-description {
+    margin-bottom: 12px;
+}
+
+.card-button {
+    border-radius: 8px;
+    color: #1E222E;
+    background-color: #fff;
+    font-family: inherit;
+    padding: 14px 32px;
+    width: 224px;
+    font-size: 15px;
+}
+
+.card-blue .card-info {
+    padding: 168px 0;
+    padding-right: 132px;
+}
+
+.card-purple .card-info {
+    padding: 172px 0;
+    padding-left: 140px;
+}
+
