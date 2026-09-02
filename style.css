@@ -230,12 +230,13 @@ button {
 .icon-manual {
     margin-top: 100px;
     margin-bottom: 40px;
+    text-align: center;
 }
 
 .portfolio-container {
     display: flex;
-    flex-direction: column;
     text-align: center;
+    gap: 25px;
 }
 
 .portfolio {
@@ -246,12 +247,18 @@ button {
 
 .portfolio-card {
     display: flex;
-    flex-direction: column;
     text-align: center;
-    max-width: 320px;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    max-width: 286px;
     height: 100%;
+}
+
+.portfolio-name {
+    font-size: 32px;
+    text-align: center;
+    padding-bottom: 40px;
+    max-width: 474px;
+    margin: 0 auto; 
 }
 
 .portfolio-img {
@@ -260,6 +267,7 @@ button {
     height: 326px;
     background-color: #F6F6F6;
     border-radius: 16px;
+    gap: 25px;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -267,9 +275,17 @@ button {
 
 .portfolio-title {
     margin-top: 20px;
+    text-align: left;
+    font-size: 20px;
+    font-weight: 700;
+    
 }
 
 .portfolio-description {
     margin-top: 12px;
     margin-bottom: 100px;
+    text-align: left;
+    font-size: 15px;
+    color: #696E82;
 }
+
