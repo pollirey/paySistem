@@ -39,6 +39,8 @@ a {
 
 button {
     border: 0;
+    cursor: pointer;
+    font-family: inherit;
 }
 
 a:focus {
@@ -47,6 +49,7 @@ a:focus {
 
 button:focus {
     outline: none;
+    
 }
 
 .header {
@@ -75,7 +78,7 @@ button:focus {
 
 
 .nav-btn {
-    padding: 24px;
+    padding: 14px 24px;
     border-radius: 8px;
     font-size: 16px;
     font-weight: 500;
@@ -83,7 +86,6 @@ button:focus {
     transition: all 0.3s ease;
     border: 1px solid transparent;
     background-color: transparent;
-    cursor: pointer;
     text-decoration: none;
 }
 
@@ -118,7 +120,6 @@ button:focus {
     font-weight: 500;
     color: #1E222E;
     background-color: transparent;
-    cursor: pointer;
     transition: all 0.3s ease;
 }
 
@@ -172,13 +173,13 @@ button:focus {
 .banner-btn {
     background-color: #476BF0;
     color: #fff;
-    font-family: inherit;
     width: 282px;
     padding: 18px 32px;
     box-sizing: border-box;
     border-radius: 8px;
     font-size: 15px;
     transition: background-color 0.3s ease, color 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .banner-btn:hover {
@@ -247,12 +248,12 @@ button:focus {
     border-radius: 8px;
     color: #1E222E;
     background-color: #fff;
-    font-family: inherit;
+    transition: all 0.3s ease;
     font-weight: 500;
     padding: 12px 21px;
     width: 224px;
     font-size: 15px;
-    cursor: pointer;
+    
 }
 
 
@@ -408,7 +409,8 @@ button:focus {
     margin-top: 12px;
     background-color: #1E222E;
     color: #FFFFFF;
-    cursor: pointer;
+    transition: background 0.3s ease;
+    
 }
 
 .footer-button:hover {
@@ -477,9 +479,13 @@ button:focus {
     font-size: 16px;
 }
 
+.footer-links a {
+    transition: color 0.3s;
+}
 
 .footer-links a:hover {
     color: #476BF0;
+    
 }
 
 .footer-links a:focus {
