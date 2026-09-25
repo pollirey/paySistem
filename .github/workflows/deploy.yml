@@ -1,0 +1,49 @@
+name: Deploy to GitHub Pages
+
+# Триггер: workflow запускается при пуше в ветку main
+on:
+  push:
+    branches: ["main"]
+
+# Права доступа, необходимые для публикации на Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  # Название задания
+  build-and-deploy:
+    # Запускаем на последней версии Ubuntu
+    runs-on: ubuntu-latest
+    
+    # Связываем с окружением GitHub Pages
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      # 1. Клонируем код из репозитория
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # 2. Настраиваем Pages (готовим окружение)
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      # 3. Здесь должны быть шаги сборки вашего проекта.
+      #    Например, для Node.js это может быть npm install и npm run build.
+      #    Если у вас уже есть собранная папка (например, dist/), этот шаг можно пропустить.
+      
+      # 4. Загружаем артефакт (папку с собранным сайтом)
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          # Укажите путь к папке, которую нужно опубликовать
+          # Например: './dist' или './public'
+          path: './dist' 
+
+      # 5. Публикуем на GitHub Pages
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

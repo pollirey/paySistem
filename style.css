@@ -1,3 +1,21 @@
+@font-face {
+    font-family: "Open Sans";
+    src: url("../fonts/OpenSans-VariableFont_wdth,wght.ttf") format("truetype-variations");
+    font-weight: 300 800;
+    font-stretch: 75% 100%;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url("../fonts/OpenSans-Italic-VariableFont_wdth,wght.ttf") format("truetype-variations");
+    font-weight: 300 800;
+    font-stretch: 75% 100%;
+    font-style: italic;
+    font-display: swap;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -6,6 +24,7 @@
 
 body {
     color: #1E222E;
+    font-family: "Open Sans", Georgia, serif;
 }
 
 .container {
@@ -15,10 +34,19 @@ body {
 
 a {
     text-decoration: none;
+    color: #1E222E;
 }
 
 button {
     border: 0;
+}
+
+a:focus {
+    outline: none;
+}
+
+button:focus {
+    outline: none;
 }
 
 .header {
@@ -45,17 +73,38 @@ button {
     gap: 10px;
 }
 
+
 .nav-btn {
     padding: 24px;
     border-radius: 8px;
     font-size: 16px;
     font-weight: 500;
     color: #1E222E;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+    background-color: transparent;
+    cursor: pointer;
+    text-decoration: none;
 }
 
 .nav-btn.active {
     color: #fff;
     background-color: #1E222E;
+}
+
+
+.nav-btn.active:focus {
+    outline: none;
+}
+
+.nav-btn.active + .nav-btn:hover,
+.nav-btn.active + .nav-btn:focus {
+    background-color: #EAECF4;
+}
+
+.buttons:has(.nav-btn:last-child.active) .nav-btn:first-child:hover,
+.buttons:has(.nav-btn:last-child.active) .nav-btn:first-child:focus {
+    background-color: #EAECF4;
 }
 
 .lang {
@@ -69,6 +118,23 @@ button {
     font-weight: 500;
     color: #1E222E;
     background-color: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.lang:hover {
+    background-color: #DBDFEC;
+}
+
+.lang:focus {
+    background-color: #DBDFEC;
+    outline: none;
+}
+
+.lang:disabled {
+    background-color: #F0F0F0;
+    color: #9A9BA0;
+    cursor: not-allowed;
 }
 
 .banner {
@@ -112,6 +178,22 @@ button {
     box-sizing: border-box;
     border-radius: 8px;
     font-size: 15px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.banner-btn:hover {
+    background-color: #3356D7;
+}
+
+.banner-btn:focus {
+    background-color: #3356D7;
+    outline: none;
+}
+
+.banner-btn:disabled {
+    background-color: #F0F0F0;
+    color: #9A9BA0;
+    cursor: not-allowed;
 }
 
 .cards {
@@ -166,9 +248,27 @@ button {
     color: #1E222E;
     background-color: #fff;
     font-family: inherit;
-    padding: 14px 32px;
+    font-weight: 500;
+    padding: 12px 21px;
     width: 224px;
     font-size: 15px;
+    cursor: pointer;
+}
+
+
+.card-button:hover {
+    background-color: #EAECF4;
+}
+
+.card-button:focus {
+    background-color: #EAECF4;
+    outline: none;
+}
+
+.card-button:disabled {
+    background-color: #FFFFFF;
+    color: #9A9BA0;
+    cursor: not-allowed;
 }
 
 .card-blue .card-info {
@@ -228,7 +328,6 @@ button {
 }
 
 .icon-manual {
-    margin-top: 100px;
     margin-bottom: 40px;
     text-align: center;
 }
@@ -257,8 +356,8 @@ button {
     font-size: 32px;
     text-align: center;
     padding-bottom: 40px;
-    max-width: 474px;
-    margin: 0 auto; 
+    max-width: 476px;
+    margin: 0 auto;
 }
 
 .portfolio-img {
@@ -278,7 +377,7 @@ button {
     text-align: left;
     font-size: 20px;
     font-weight: 700;
-    
+
 }
 
 .portfolio-description {
@@ -289,3 +388,183 @@ button {
     color: #696E82;
 }
 
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.footer {
+    background-color: #F4F6FA;
+    padding-top: 40px;
+}
+
+.footer-button {
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    width: 143px;
+    margin-top: 12px;
+    background-color: #1E222E;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.footer-button:hover {
+    background-color: #383F52;
+}
+
+.footer-button:focus {
+    outline: none;
+    background-color: #383F52;
+}
+
+.footer-button:disabled {
+    background-color: #E3E5EB;
+    color: #9CA3AF;
+    cursor: not-allowed;
+    border-color: transparent;
+}
+
+.footer-contact {
+    margin-right: 128px;
+}
+
+.footer-phone .footer-description:hover {
+    color: #476BF0;
+}
+
+.footer-name {
+    color: #6A6E80;
+    font-weight: 400;
+    font-size: 13px;
+    margin-top: 16px;
+    width: 191px;
+
+}
+
+.footer-description {
+    color: #1E222E;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.footer-local {
+    margin-top: 8px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.footer-sity {
+    color: #476BF0;
+}
+
+.footer-center {
+    display: flex;
+    gap: 60px;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    gap: 16px;
+    color: #1E222E;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+
+.footer-links a:hover {
+    color: #476BF0;
+}
+
+.footer-links a:focus {
+    color: #476BF0;
+}
+
+.footer-right {
+    margin-left: 156px;
+    width: 400px;
+
+}
+
+.footer-policy {
+    color: #6A6E80;
+    font-size: 13px;
+
+}
+
+.footer-link {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 12px;
+    font-size: 13px;
+    color: #6A6E80;
+    width: 348px;
+
+}
+
+.footer-link:hover,
+.footer-lang:hover {
+    color: #1E222E;
+}
+
+.footer-link:focus,
+.footer-lang:focus {
+    color: #1E222E;
+}
+
+.footer-icon {
+    margin-top: 32px;
+    display: flex;
+    gap: 8px;
+}
+
+.footer-icon svg:hover circle {
+    fill: #D2D4DA;
+}
+
+.footer-icon svg:focus circle {
+    fill: #D2D4DA;
+}
+
+.footer-icon svg {
+    border-radius: 50%;
+}
+
+.footer-copy {
+    color: #6A6E80;
+    width: 450px;
+    margin-top: 32px;
+    margin-bottom: 12px;
+}
+
+.footer-meta {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.footer-info {
+    font-size: 10px;
+    color: #6A6E80;
+}
+
+.footer-en {
+    display: flex;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.footer-lang {
+    font-size: 13px;
+    color: #6A6E80;
+}
+
+.footer-lang:hover {
+    color: #1E222E;
+}
