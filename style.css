@@ -198,7 +198,7 @@ button:focus {
 }
 
 .cards {
-    padding: 100px 0;
+    margin-top: 100px;
 }
 
 .card-list {
@@ -217,27 +217,78 @@ button:focus {
     gap: 92px;
 }
 
+.card-advanages {
+    border-radius: 16px;
+    height: 640px;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+.card-groups {
+    display: flex;
+    gap: 40px;
+}
+
 .card-blue {
     background-color: #A8DCFF;
 }
 
-.card-purple {
+.card-color {
     background-color: #8CA3FF;
+    color: #FFFFFF;
+}
+
+.card-gray {
+    background-color: #7F8499;
+    color: #FFFFFF;
+}
+
+.card-white {
+    background-color: #F4F6FA;
+    color: #1E222E;
 }
 
 .card-info {
     display: flex;
     gap: 20px;
     flex-direction: column;
+    max-width: 420px;
+}
+
+.card-group{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 60px;
 }
 
 .card-title {
     font-size: 32px;
+    
 }
 
 .card-description {
     font-size: 18px;
+    list-style: none;
+}
 
+.card-description li {
+  padding-left: 25px; 
+  margin-bottom: 12px; 
+  position: relative;
+}
+
+.card-description li::before {
+  content: "○";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #FFFFFF;
+  
+}
+
+.card-description li {
+ 
 }
 
 .card-blue .card-description {
@@ -275,6 +326,10 @@ button:focus {
 .card-blue .card-info {
     padding: 168px 0;
     padding-right: 132px;
+}
+
+.card-purple{
+    background-color: #8CA3FF;
 }
 
 .card-purple .card-info {
